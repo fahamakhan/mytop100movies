@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import helmet from 'helmet';
 
 
 async function bootstrap() {
@@ -12,7 +11,6 @@ async function bootstrap() {
     "preflightContinue": false,
     "optionsSuccessStatus": 204
   });
-  app.use(helmet());
 
   const config = new DocumentBuilder()
     .setTitle('MyTop100Movies')
